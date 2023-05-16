@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COUNTER</title>
+    <link rel="stylesheet" href="style1.css" />
+</head>
+<body>
+<div id="flex-container">
+<h1>COUNTER</h1>
+<div id="counter">
+    <div id="result">0</div>
+</div>
+    <div id="increment"><button onclick="increment()">INCREMENT</button></div>
+    <div id="reset"><button onclick="reset()">RESET</button></div>
+    <div id="decrement"><button onclick="decrement()">DECREMENT</button></div>
+</div>
+<script>
+    var counter = 0;
+    let result = document.getElementById('result')
+
+    function increment(e)
+    {
+        counter++;
+        result.textContent = counter;
+    }
+
+    function decrement(e)
+    {
+        counter--;
+        result.textContent = counter;
+    }
+
+    function reset(e)
+    {
+        counter = 0;
+        result.textContent = counter;
+    }
+</script>
+</body>
+</html>
